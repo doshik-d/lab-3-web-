@@ -1,0 +1,733 @@
+@font-face {
+  font-family: 'ClashDisplay';
+  src: url('ClashDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('Satoshi-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ClashDisplay;
+}
+
+:root {
+    --white-color: #ffff;
+    --light-gray-color: #F9F9F9;
+    --purple-color: #2A254B;
+    --dark-purple-color: #22202E;
+    --light-purple-color: #726E8D;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white-color);
+    color: var(--dark-purple-color);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+header {
+    max-height: 120px;
+    top: 0;
+    background: var(--white-color);
+}
+
+.top-bar {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 40px;
+}
+
+.search-logo,
+.shopping-cart,
+.profile-logo {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 600;
+    justify-self: center;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    justify-content: center;
+    gap: 48px;
+    padding: 24px 40px 32px;
+
+}
+
+.nav-item a {
+    color: var(--light-purple-color);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: Satoshi;
+}
+
+/*ФЕРСТ ПЕЙДЖ*/
+.first-page {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr auto;
+    margin: 40px 110px 0px 110px;
+    background: var(--white-color);
+    align-items: center;
+}
+
+.first-page_content {
+    display: grid;
+    grid-template-areas:
+    "textt img";
+    max-height: 620px;
+    background: var(--purple-color);
+}    
+
+.first-page_text {
+    grid-area: textt;
+    padding: 100px 100px 0;
+    opacity: 0.92;     
+    color: var(--white-color);
+    display: grid;
+    grid-template-rows: auto auto 1fr;  
+    grid-template-areas: 
+        "title"
+        "btn"
+        "text2";
+    gap: 32px;
+    align-content: start;     
+}
+
+.hero-title {
+    grid-area: title;
+    font-family: ClashDisplay;
+    font-size: 32px;
+}
+
+.btn {
+    grid-area: btn;
+    padding: 16px 40px;
+    background: rgba(249, 249, 249, 0.15);
+    border: none;
+    color: var(--white-color);
+    font-size: 15px;
+    cursor: pointer;
+    width: fit-content;
+    font-family: Satoshi;
+}
+
+.hero-desc {
+    grid-area: text2;
+    font-size: 15px;
+    opacity: 0.90;
+    max-width: 520px;
+    align-self: end;        
+    justify-self: start;     
+    padding-bottom: 50px;     
+    margin: 0; 
+    font-family: Satoshi;                
+}
+
+.chair-image {
+    grid-area: img;
+}
+
+.chair-image img {
+    max-height: 620px;
+}
+
+/*НОВАЯ ЧАСТЬ*/
+.our-brand {
+    padding: 120px 120px 90px 120px;
+    text-align: center;
+    background: var(--white-color);
+}
+
+.section-title-1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    color: var(--purple-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.feature-icon {
+    display: flex;
+    height: 15%;
+}
+
+.feature-title {
+    font-size: 18px;
+    color: var(--purple-color);
+}
+
+.feature-desc {
+    font-size: 16px;
+    color: var(--purple-color);
+    max-width: 300px;
+    font-family: Satoshi;
+}
+
+/*НЬЮ КЕРАМИКС*/
+.collection {
+    text-align: center;
+    max-width: 1300;
+    padding: 0px 150px;
+    background: var(--white-color);
+}
+
+.section-title_collection {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--purple-color);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.product {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+    text-align: left;
+}
+
+.product img {
+    width: 100%;
+    height: 370px; 
+    object-fit: cover;
+}
+
+.product-title {
+    font-size: 20px;
+    color: var(--purple-color);
+}
+
+.price {
+    font-size: 20px;
+    color: var(--purple-color);
+    font-family: Satoshi;
+}
+
+.btn-center {
+    display: inline-block;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding: 12px 20px;
+    background: var(--light-gray-color);
+    border: none;
+    font-size: 16px;
+    color: var(--purple-color);
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Satoshi;
+}
+
+/*ПОПЮЛАР*/
+.popular {
+    text-align: center;
+    max-width: 1300;
+    padding: 30px 150px;
+    background: var(--white-color);
+}
+
+.popular-section-title {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--purple-color);
+}
+
+.popular-products-grid {
+    display: grid;
+    grid-template-columns: 550px auto auto;
+    gap: 32px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.popular-product {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+    text-align: left;
+}
+
+.popular-product img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+}
+
+.popular-product-title {
+    font-size: 20px;
+    color: var(--purple-color);
+}
+
+/*джин аз*/
+.newsletter {
+    padding: 40px 40px;
+    background: var(--light-gray-color);
+    text-align: center;
+}
+
+.newsletter-inside {
+    padding: 100px 40px;
+    background: var(--white-color);
+    text-align: center;
+}
+
+.section-title-2 {
+    font-size: 30px;
+    margin-bottom: 16px;
+    color: var(--purple-color);
+}
+
+.newsletter-desc {
+    font-size: 16px;
+    color: var(--purple-color);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    font-family: Satoshi;
+}
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 16px 20px;
+    border: none;
+    background: var(--light-gray-color);
+    font-size: 15px;
+    color: var(--purple-color);
+}
+
+.newsletter-form button {
+    padding: 16px 32px;
+    background: var(--purple-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/*чет про лондон*/
+.about {
+    background: var(--white-color);
+}
+
+.about-content {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: 
+        "text image"
+        "text image"
+        "text image"
+        "button image";
+    align-items: start;
+}
+
+.about-text {
+    padding: 80px 80px;
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 700px;
+}
+
+.new-button {
+    flex-direction: column;
+    padding: 80px 80px;
+     grid-area: button;
+    justify-content: space-between;
+}
+
+.about-title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: var(--purple-color);
+}
+
+.about-desc {
+    font-size: 16px;
+    color: var(--purple-color);
+    line-height: 1.6;
+}
+
+.btn-new {
+    grid-area: button;
+    padding: 14px 32px;
+    background: var(--light-gray-color);
+    border: none;
+    font-size: 16px;
+    color: var(--purple-color);
+    cursor: pointer;
+    width: fit-content;
+    text-decoration: none;
+    font-family: Satoshi;
+    align-self: end; 
+    margin-top: auto;
+}
+
+
+.about-image {
+    grid-area: image;
+    max-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*футер*/
+.footer {
+    background: var(--purple-color);
+    color: #ddd;
+    padding: 80px 40px 40px;
+    font-size: 14px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-title {
+    font-size: 14px;
+    color: var(--white-color);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-column a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.newsletter-footer form {
+    display: flex;
+    gap: 0;
+    margin-top: 12px;
+}
+
+.newsletter-footer input {
+    flex: 1;
+    padding: 14px 16px;
+    background: var(--light-purple-color);
+    border: none;
+    color: var(--white-color);
+    font-size: 14px;
+}
+
+.newsletter-footer input::placeholder {
+    color: var(--white-color);
+}
+
+.newsletter-footer button {
+    padding: 0 24px;
+    background: var(--white-color);
+    color: var(--purple-color);
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 40px;
+    border-top: 1px solid var(--light-purple-color);
+    font-size: 14px;
+    color: var(--white-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 24px;
+}
+
+.social-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    /* Убираем радиусы + скрываем стул */
+    * { 
+        border-radius: 0; 
+    }
+    .chair-image { 
+        display: none; 
+    }
+
+    .first-page {
+        margin: 16px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "textt";
+    }
+    .first-page_text {
+        padding: 64px 20px 56px;     
+        text-align: center;
+        gap: 24px;
+    }
+    .hero-title { 
+        font-size: 32px; 
+        line-height: 1.15; 
+    }
+    .hero-desc { font-size: 15px;
+        max-width: 340px; 
+        margin: 0 auto; 
+    }
+    .btn { 
+        margin: 0 auto; 
+    }
+
+    /* Минимальные отступы у всех секций */
+    .our-brand,
+    .collection,
+    .popular,
+    .newsletter-inside,
+    .about,
+    .footer {
+        padding: 56px 16px; 
+        margin: 0;
+    }
+
+    .section-title,
+    .popular-section-title,
+    .section-title_collection {
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+
+    /* What makes our brand differen*/
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: left;
+    }
+
+    .feature {
+        display: grid;
+        grid-template-columns: 44px 1fr;  
+        gap: 16px;
+        align-items: start;
+    }
+
+    .feature-icon  img {
+        display: none;
+    }
+
+    .feature-title {
+        font-size: 18px;
+        color: var(--purple-color);
+        margin: 0;
+        padding-top: 4px;               
+    }
+
+    .feature-desc {
+        font-size: 15px;
+        line-height: 1.55;
+        color: #555;
+        margin: 0;
+        grid-column: 2 / 3;              
+    }
+
+    /* New ceramics — 2×2 */
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .product img { 
+        height: 240px; 
+        object-fit: cover; 
+    }
+    .product-title, .price { 
+        font-size: 16px; 
+    }
+
+    /* Popular products — только 2 товара */
+    .popular-products-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .popular-product:first-child { 
+        display: none; 
+    }
+    .popular-product img { 
+        height: 260px; 
+        object-fit: cover; 
+    }
+
+
+    /* About London */
+    .about {
+        padding: 0 !important;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "text"
+            "button"
+            "image";
+        gap: 0;
+    }
+
+    .about-text {
+        grid-area: text;
+        padding: 64px 16px 32px;
+        text-align: left;
+        gap: 24px;
+    }
+
+    .about-title {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .about-desc {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    /* ← ВОТ ГЛАВНОЕ: переопределяем .new-button и .btn-new → */
+    .new-button {
+        grid-area: button;
+        padding: 0 16px 40px 16px !important;
+    }
+
+    .btn-new {
+        display: block !important;
+        width: 100% !important;                    /* растягиваем на 100% */
+        max-width: none !important;
+        padding: 18px 20px !important;
+        text-align: center !important;
+        font-size: 16px !important;
+        background: var(--light-gray-color) !important;
+        color: var(--purple-color) !important;
+        text-decoration: none !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+        /* убираем старые свойства, которые ломавшие растяжку */
+        align-self: stretch !important;
+        margin-top: 0 !important;
+    }
+
+    .about-image {
+        grid-area: image;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Newsletter */
+    .newsletter-inside { 
+        padding: 56px 16px; 
+    }
+    .newsletter-form {
+        flex-direction: column;
+        max-width: none;
+    }
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+    .newsletter-form button {
+         margin-top: 12px; 
+    }
+
+    /* Футер */
+    .footer { 
+        padding: 64px 16px 40px; 
+    }
+    .footer-columns { 
+        grid-template-columns: 1fr; 
+        gap: 48px; 
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+        padding-top: 40px;
+    }
+    .social-links { 
+        order: -1; 
+        justify-content: center; 
+    }
+}
