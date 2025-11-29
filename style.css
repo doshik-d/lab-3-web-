@@ -233,7 +233,7 @@ header {
 
 .product img {
     width: 100%;
-    height: 370px; 
+    height: 330px; 
     object-fit: cover;
 }
 
@@ -457,18 +457,14 @@ header {
     font-size: 14px;
     color: var(--white-color);
     margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    opacity: 85%;
 }
 
 .footer-column a {
-    color: #bbb;
+    color:  var(--white-color);
     text-decoration: none;
+    opacity: 85%;
     transition: color 0.2s;
-}
-
-.footer-column a:hover {
-    color: var(--white-color);
 }
 
 .newsletter-footer form {
@@ -660,35 +656,31 @@ header {
 
     .about-title {
         font-size: 28px;
-        line-height: 1.2;
     }
 
     .about-desc {
         font-size: 15px;
-        line-height: 1.55;
     }
 
-    /* ← ВОТ ГЛАВНОЕ: переопределяем .new-button и .btn-new → */
+    /* ← ВОТ ГЛАВНОЕ: переопределяем .new-button и .btn-new */
     .new-button {
         grid-area: button;
-        padding: 0 16px 40px 16px !important;
+        padding: 0 16px 40px 16px;
     }
 
     .btn-new {
-        display: block !important;
-        width: 100% !important;                    /* растягиваем на 100% */
-        max-width: none !important;
-        padding: 18px 20px !important;
-        text-align: center !important;
-        font-size: 16px !important;
-        background: var(--light-gray-color) !important;
-        color: var(--purple-color) !important;
-        text-decoration: none !important;
-        border-radius: 0 !important;
-        box-sizing: border-box !important;
-        /* убираем старые свойства, которые ломавшие растяжку */
-        align-self: stretch !important;
-        margin-top: 0 !important;
+        display: block;
+        width: 100%;                    
+        max-width: none;
+        padding: 18px 20px;
+        text-align: center;
+        font-size: 16px;
+        background: var(--light-gray-color);
+        color: var(--purple-color);
+        text-decoration: none;
+        border-radius: 0;
+        box-sizing: border-box;
+        margin-top: 0;
     }
 
     .about-image {
