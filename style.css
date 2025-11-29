@@ -49,10 +49,14 @@ header {
     padding: 16px 40px;
 }
 
+.top-bar-out {
+    border-bottom: 2px var(--light-purple-color);
+}
+
 .search-logo,
 .shopping-cart,
 .profile-logo {
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -93,7 +97,7 @@ header {
     display: grid;
     grid-template-areas:
     "textt img";
-    max-height: 620px;
+    max-height: 560px;
     background: var(--purple-color);
 }    
 
@@ -137,7 +141,7 @@ header {
     max-width: 520px;
     align-self: end;        
     justify-self: start;     
-    padding-bottom: 50px;     
+    padding-bottom: 70px;     
     margin: 0; 
     font-family: Satoshi;                
 }
@@ -147,7 +151,7 @@ header {
 }
 
 .chair-image img {
-    max-height: 620px;
+    max-height: 560px;
 }
 
 /*НОВАЯ ЧАСТЬ*/
@@ -346,7 +350,6 @@ header {
     color: var(--white-color);
     border: none;
     cursor: pointer;
-    transition: background 0.2s;
 }
 
 /*чет про лондон*/
@@ -379,7 +382,7 @@ header {
 .new-button {
     flex-direction: column;
     padding: 80px 80px;
-     grid-area: button;
+    grid-area: button;
     justify-content: space-between;
 }
 
@@ -429,7 +432,7 @@ header {
 /*футер*/
 .footer {
     background: var(--purple-color);
-    color: #ddd;
+    color: var(--white-color);
     padding: 80px 40px 40px;
     font-size: 14px;
 }
@@ -463,7 +466,7 @@ header {
 }
 
 .footer-column a:hover {
-    color: #fff;
+    color: var(--white-color);
 }
 
 .newsletter-footer form {
