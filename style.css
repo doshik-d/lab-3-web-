@@ -50,7 +50,9 @@ header {
 }
 
 .top-bar-out {
-    border-bottom: 2px var(--light-purple-color);
+    border-bottom: 1px solid var(--light-purple-color);
+    opacity: 40%;
+    margin: 0px 30px 0px 30px;
 }
 
 .search-logo,
